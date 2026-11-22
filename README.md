@@ -1,6 +1,6 @@
 # HVSR Seismic Microzonation: South Campus, Universitas Padjadjaran (Jatinangor, Sumedang)
 
-[![CI](https://github.com/Madkinny/hvsr-unpad-south-microzonation/actions/workflows/ci.yml/badge.svg)](https://github.com/Madkinny/hvsr-unpad-south-microzonation/actions/workflows/ci.yml)
+[![CI](https://github.com/Madkinny/hvsr-unpad-south-microzonation/actions/workflows/ci.yml/badge.svg)](https://github.com/Madkinny/hvsr-unpad-south-microzonation/actions/workflows/ci.yml) [![DOI](https://zenodo.org/badge/1467891110.svg)](https://doi.org/10.5281/zenodo.24447972)
 
 Reproducible quality control and mapping of **202 single-station HVSR (microtremor H/V)
 measurements** collected on a ~50 m grid across the southern part of the UNPAD Jatinangor
@@ -118,4 +118,4 @@ workbook itself is not published.
 ## License and citation
 
 Code: MIT. Data: CC BY 4.0 [ISI: confirm with supervisors]. If you use this dataset, please
-cite it via the Zenodo DOI: [ISI: DOI after first release].
+cite it via the Zenodo DOI: [10.5281/zenodo.24447972](https://doi.org/10.5281/zenodo.24447972).
