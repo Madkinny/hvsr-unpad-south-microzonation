@@ -9,7 +9,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from . import maps
+from . import export, maps
 from .projection import lonlat_to_utm
 from .qc import run_qc
 
@@ -93,7 +93,16 @@ def main() -> None:
     maps.site_class_map(clean, out / "site_class_map.png")
     maps.qc_map(annotated, out / "qc_map.png")
 
+    gis = paths["gis_dir"]
+    gdf = export.stations_geodataframe(clean)
+    max_diff = export.projection_check(gdf)
+    if max_diff > 0.01:
+        raise RuntimeError(f"NumPy UTM projection differs from pyproj by {max_diff:.4f} m")
+    export.write_geopackage(gdf, gis / "hvsr_south_stations.gpkg")
+    export.write_netcdf(export.gridded_dataset(clean, step), gis / "hvsr_south_grids.nc")
+
     print(f"{len(annotated)} raw -> {len(clean)} clean stations ({crs})")
+    print(f"Projection check vs pyproj: max difference {max_diff * 1000:.3f} mm")
 
 
 if __name__ == "__main__":

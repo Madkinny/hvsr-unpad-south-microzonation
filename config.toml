@@ -6,6 +6,7 @@ clean_csv = "data/processed/hvsr_south_clean.csv"
 qc_log_csv = "data/processed/qc_log.csv"
 qc_report = "outputs/qc_report.md"
 maps_dir = "outputs/maps"
+gis_dir = "outputs/gis"
 
 [qc]
 # Stations with A0 above this are treated as unreliable H/V peaks and excluded.
