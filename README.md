@@ -90,6 +90,13 @@ longer recording before being used for design decisions.
   low-precision coordinates. 10–20 min recordings are short for low-f0 sites under SESAME
   guidelines. Interpolated surfaces are smooth estimates between stations, not measurements.
 
+## AI-evaluation benchmark task
+
+[`benchmark/hvsr_qc_task/`](benchmark/hvsr_qc_task/) turns this dataset into an AI-training task:
+a prompt with realistic data traps, a 100-point rubric, an automated grader that diagnoses
+projection errors (missing false northing, wrong UTM zone, swapped axes), and a worked example
+of a flawed submission with its grade.
+
 ## Reproduce
 
 ```bash
