@@ -77,7 +77,7 @@ def main() -> None:
 
     for key in ("clean_csv", "qc_log_csv", "qc_report"):
         paths[key].parent.mkdir(parents=True, exist_ok=True)
-    clean.to_csv(paths["clean_csv"], index=False, float_format="%.6f")
+    clean.to_csv(paths["clean_csv"], index=False)
     log.to_csv(paths["qc_log_csv"], index=False)
     write_report(annotated, log, clean, paths["qc_report"], crs)
 
