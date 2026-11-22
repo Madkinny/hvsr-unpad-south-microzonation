@@ -90,6 +90,13 @@ longer recording before being used for design decisions.
   low-precision coordinates. 10–20 min recordings are short for low-f0 sites under SESAME
   guidelines. Interpolated surfaces are smooth estimates between stations, not measurements.
 
+## GIS outputs
+
+- `outputs/gis/hvsr_south_stations.gpkg`: 190 QC'd stations (EPSG:32748), ready for QGIS
+- `outputs/gis/hvsr_south_grids.nc`: gridded f0, A0 and log10(Kg) as a CF-style NetCDF (xarray)
+
+The NumPy UTM projection is cross-checked against pyproj on every run (tolerance 1 cm).
+
 ## AI-evaluation benchmark task
 
 [`benchmark/hvsr_qc_task/`](benchmark/hvsr_qc_task/) turns this dataset into an AI-training task:
