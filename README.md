@@ -131,5 +131,5 @@ workbook itself is not published.
 
 ## License and citation
 
-Code: MIT. Data: CC BY 4.0 [ISI: confirm with supervisors]. If you use this dataset, please
+Code: MIT. Data: CC BY 4.0 If you use this dataset, please
 cite it via the Zenodo DOI: [10.5281/zenodo.24447972](https://doi.org/10.5281/zenodo.24447972).
