@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this dataset or code, please cite it as below."
+title: "HVSR Seismic Microzonation: South Campus, Universitas Padjadjaran (Jatinangor, Sumedang)"
+type: dataset
+authors:
+  - family-names: Robbani
+    given-names: Muhammad Syauqi
+    affiliation: Universitas Padjadjaran
+    # orcid: "https://orcid.org/[ISI]"
+  # [ISI: add team members and supervisors who agree to be listed]
+date-released: 2026-11-23
+license: CC-BY-4.0
+keywords: [HVSR, microtremor, seismic microzonation, site amplification, Indonesia]

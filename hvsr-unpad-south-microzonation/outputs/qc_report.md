@@ -1,0 +1,71 @@
+# QC report: HVSR south UNPAD Jatinangor
+
+- Raw stations: **202**
+- Excluded: **12**
+- Clean stations: **190**
+- Projected CRS: EPSG:32748 (WGS84 / UTM zone 48S)
+
+## Rules applied
+
+| rule            | action     |   stations |
+|:----------------|:-----------|-----------:|
+| a0_outlier      | excluded   |          8 |
+| coord_precision | warned     |         10 |
+| coord_typo      | fixed      |          2 |
+| duplicate_id    | relabelled |          8 |
+| missing_result  | excluded   |          4 |
+
+## Per-station log
+
+| station_id   | rule            | action     | detail                                                      |
+|:-------------|:----------------|:-----------|:------------------------------------------------------------|
+| JT251        | coord_typo      | fixed      | lat: '-6. 925219' -> '-6.925219'                            |
+| JT252        | coord_typo      | fixed      | lat: '-6. 925402' -> '-6.925402'                            |
+| JT199        | coord_precision | warned     | lon=107.772, lat=-6.92153 (< 4 decimals)                    |
+| JT200        | coord_precision | warned     | lon=107.771, lat=-6.9218 (< 4 decimals)                     |
+| JT201        | coord_precision | warned     | lon=107.772, lat=-6.9213 (< 4 decimals)                     |
+| JT202        | coord_precision | warned     | lon=107.77, lat=-6.92212 (< 4 decimals)                     |
+| JT203        | coord_precision | warned     | lon=107.772, lat=-6.92148 (< 4 decimals)                    |
+| JT204        | coord_precision | warned     | lon=107.771, lat=-6.92184 (< 4 decimals)                    |
+| JT205        | coord_precision | warned     | lon=107.771, lat=-6.92059 (< 4 decimals)                    |
+| JT206        | coord_precision | warned     | lon=107.771, lat=-6.92127 (< 4 decimals)                    |
+| JT395        | coord_precision | warned     | lon=107.774, lat=-6.92156 (< 4 decimals)                    |
+| JT331        | coord_precision | warned     | lon=107.7739, lat=-6.927 (< 4 decimals)                     |
+| JT224        | duplicate_id    | relabelled | JT224a (surveyed 2025-03-12, lon=107.772556, lat=-6.928501) |
+| JT224        | duplicate_id    | relabelled | JT224b (surveyed 2025-03-15, lon=107.77404, lat=-6.927062)  |
+| JT225        | duplicate_id    | relabelled | JT225a (surveyed 2025-03-12, lon=107.771589, lat=-6.928986) |
+| JT225        | duplicate_id    | relabelled | JT225b (surveyed 2025-03-15, lon=107.773813, lat=-6.92633)  |
+| JT226        | duplicate_id    | relabelled | JT226a (surveyed 2025-03-12, lon=107.771657, lat=-6.927989) |
+| JT226        | duplicate_id    | relabelled | JT226b (surveyed 2025-03-15, lon=107.773382, lat=-6.926127) |
+| JT227        | duplicate_id    | relabelled | JT227a (surveyed 2025-03-12, lon=107.773015, lat=-6.927643) |
+| JT227        | duplicate_id    | relabelled | JT227b (surveyed 2025-03-15, lon=107.773979, lat=-6.922575) |
+| JT266        | missing_result  | excluded   | f0_hz not numeric: 'data koordinasinhya ilang'              |
+| JT267        | missing_result  | excluded   | f0_hz not numeric: 'data koordinasinhya ilang'              |
+| JT273        | missing_result  | excluded   | f0_hz not numeric: 'data kordinatniya ilang'                |
+| JT300        | missing_result  | excluded   | f0_hz not numeric: 'NORTH tidak terdeteksi'                 |
+| JT200        | a0_outlier      | excluded   | A0=52.23 > 10.0 (f0=12.77 Hz, Kg=213.6)                     |
+| JT211        | a0_outlier      | excluded   | A0=26.23 > 10.0 (f0=13.24 Hz, Kg=51.9)                      |
+| JT235        | a0_outlier      | excluded   | A0=14.59 > 10.0 (f0=5.73 Hz, Kg=37.2)                       |
+| JT236        | a0_outlier      | excluded   | A0=11.10 > 10.0 (f0=3.64 Hz, Kg=33.8)                       |
+| JT305        | a0_outlier      | excluded   | A0=10.68 > 10.0 (f0=5.23 Hz, Kg=21.8)                       |
+| JT306        | a0_outlier      | excluded   | A0=85.21 > 10.0 (f0=13.17 Hz, Kg=551.1)                     |
+| JT308        | a0_outlier      | excluded   | A0=36.32 > 10.0 (f0=10.45 Hz, Kg=126.3)                     |
+| JT350        | a0_outlier      | excluded   | A0=83.14 > 10.0 (f0=11.11 Hz, Kg=622.3)                     |
+
+## Clean dataset summary
+
+|       |   count |   min |   50% |    max |
+|:------|--------:|------:|------:|-------:|
+| f0_hz |     190 | 0.636 | 6.071 | 14.004 |
+| a0    |     190 | 1.465 | 3.472 |  9.558 |
+| t0_s  |     190 | 0.071 | 0.165 |  1.572 |
+| kg    |     190 | 0.276 | 2.044 | 16.397 |
+
+## Kanai site classes (clean stations)
+
+| Class | Stations |
+|---|---|
+| I: T0 < 0.15 s (hard / rock) | 71 |
+| II: 0.15-0.25 s (medium) | 89 |
+| III: 0.25-0.40 s (soft) | 28 |
+| IV: T0 > 0.40 s (very soft) | 2 |

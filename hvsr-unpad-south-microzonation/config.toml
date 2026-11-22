@@ -1,0 +1,24 @@
+# Pipeline configuration. Every QC threshold lives here so decisions are explicit.
+
+[paths]
+raw_csv = "data/raw/hvsr_south_raw.csv"
+clean_csv = "data/processed/hvsr_south_clean.csv"
+qc_log_csv = "data/processed/qc_log.csv"
+qc_report = "outputs/qc_report.md"
+maps_dir = "outputs/maps"
+
+[qc]
+# Stations with A0 above this are treated as unreliable H/V peaks and excluded.
+# Original SESAME (2004) reliability flags were not preserved with the data,
+# so this amplitude screen is the documented substitute.
+max_a0 = 10.0
+# Tolerance for checking the derived columns T0 = 1/f0 and Kg = A0^2/f0.
+rel_tol = 1e-6
+# Coordinates with fewer decimals than this are flagged (kept, but warned):
+# 3 decimal degrees ~ ±55 m, comparable to the 50 m survey spacing.
+min_coord_decimals = 4
+# Plausible bounding box for the study area (lon_min, lon_max, lat_min, lat_max).
+bbox = [107.765, 107.785, -6.935, -6.915]
+
+[maps]
+grid_spacing_m = 10
