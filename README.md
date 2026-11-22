@@ -1,5 +1,7 @@
 # HVSR Seismic Microzonation: South Campus, Universitas Padjadjaran (Jatinangor, Sumedang)
 
+[![CI](https://github.com/Madkinny/hvsr-unpad-south-microzonation/actions/workflows/ci.yml/badge.svg)](https://github.com/Madkinny/hvsr-unpad-south-microzonation/actions/workflows/ci.yml)
+
 Reproducible quality control and mapping of **202 single-station HVSR (microtremor H/V)
 measurements** collected on a ~50 m grid across the southern part of the UNPAD Jatinangor
 campus, West Java, Indonesia (March–June 2025). After documented QC, **190 stations** are
